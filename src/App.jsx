@@ -4,6 +4,7 @@ import Hero from './components/Hero'
 import TrustedBy from './components/TrustedBy'
 import Services from './components/Services'
 
+
 const App = () => {
   const [theme, setTheme] = useState(localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light')
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <Hero/>
       <TrustedBy/>
       <Services/>
+     
     </div>
   )
 }

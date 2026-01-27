@@ -1,6 +1,7 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import assets from '../assets/assets'
 import Title from './Title'
+import ServiceCard from './ServiceCard'
 
 const Services = () => {
   const servicesData = [
@@ -42,8 +43,14 @@ const Services = () => {
     className="absolute -top-110 -left-70 -z-1 dark:hidden"
   />
   <Title title='How can we help ?' desc='From strategy to execution, we’ve got you covered.'/>
+  <div className="flex flex-col md:grid grid-cols-2">
+  {servicesData.map((service, index) => (
+    <ServiceCard key={index} service={service} index={index} />
+  ))}
 </div>
 
+</div>
+           
   )
 }
 
