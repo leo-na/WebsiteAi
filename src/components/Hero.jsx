@@ -30,18 +30,30 @@ const Hero = () => {
   </span>{' '}
   impact.
 </motion.h1>
-<p className="text-sm sm:text-lg font-medium text-gray-500 dark:text-white/75 max-w-4/5 sm:max-w-lg pb-3">
-  Creating meaningful connections and turning big ideas into interactive digital experiences.
-</p>
+<motion.p 
+initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 1 }}
+      viewport={{ once: true }}
 
-<div className="relative">
+className="text-sm sm:text-lg font-medium text-gray-500 dark:text-white/75 max-w-4/5 sm:max-w-lg pb-3">
+  Creating meaningful connections and turning big ideas into interactive digital experiences.
+</motion.p>
+
+<motion.div 
+initial={{ opacity: 0, scale: 0.9}}
+      whileInView={{ opacity: 1, y: 1}}
+      transition={{ duration: 0.5, delay: 2 }}
+      viewport={{ once: true }}
+
+className="relative">
   <img src={assets.hero_img} alt="" className="w-full max-w-6xl" />
   <img
     src={assets.bgImage1}
     alt=""
     className="absolute -top-40 -right-40 sm:-top-100 sm:-right-70 -z-1 dark:hidden"
   />
-</div>
+</motion.div>
 
 
    </div>
